@@ -20,6 +20,6 @@ public class ClientRequestController {
     public String sayHello(@RequestParam(value = "name", defaultValue = "kwz")
                                    String name) {
 
-        return "hello" + name + ",my port is:" + port;
+        return "hello " + name + ",my port is:" + port;
     }
 }
