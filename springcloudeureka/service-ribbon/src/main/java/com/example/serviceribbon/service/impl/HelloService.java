@@ -26,6 +26,9 @@ public class HelloService implements IHelloService {
      * V2版本：加入熔断技术 @HystrixCommand注解
      * 该注解对该方法创建了熔断器的功能，并指定了fallbackMethod熔断方法，熔断方法直接返回了一个字符
      * 串，字符串为”hello,”+name+”,sorry,error!”,我们将SERVICE-CLIENT服务关了之后就会进入熔断了。
+     *
+     * 通过加入Hystrix组件，在调用 service-hi的API接口时，会执行快速失败，直接返回一组字符串，而不是
+     * 等待响应超时，这很好的控制了容器的线程阻塞。
      * Param [name]
      * return java.lang.String
      */

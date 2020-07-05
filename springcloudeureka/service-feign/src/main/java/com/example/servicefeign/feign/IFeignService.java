@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestParam;
  * Date 2020/7/5 12:26
  * Created by kwz
  */
-@FeignClient("service-client")
-public interface FeignService {
+@FeignClient(value = "service-client", fallback = FeignServiceImpl.class)
+public interface IFeignService {
 
     @GetMapping("client/hello")
     String sayHelloFromEurekaClientOne(@RequestParam("name") String name);
