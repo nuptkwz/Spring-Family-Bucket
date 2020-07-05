@@ -26,6 +26,6 @@ public class HelloService implements IHelloService {
      */
     @Override
     public String helloService(String name) {
-        return restTemplate.getForObject("http://SERVICE-CLIENT/hi?name=" + name, String.class);
+        return restTemplate.getForObject("http://SERVICE-CLIENT/client/hello?name=" + name, String.class);
     }
 }

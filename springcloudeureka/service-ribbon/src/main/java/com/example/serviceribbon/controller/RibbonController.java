@@ -20,8 +20,15 @@ public class RibbonController {
     @Setter(onMethod_ = @Autowired)
     private IHelloService iHelloService;
 
+    /**
+     * Description
+     * 当service-ribbon通过restTemplate调用service-client的client接口时，
+     * 因为用ribbon进行了负载均衡，会轮流的调用service-client：8762和8763 两个端口的hi接口；
+     * Param [name]
+     * return java.lang.String
+     */
     @GetMapping("/hello")
-    private String helloRibbon(@RequestParam String name){
-        return iHelloService.hiService(name);
+    private String helloRibbon(@RequestParam String name) {
+        return iHelloService.helloService(name);
     }
 }

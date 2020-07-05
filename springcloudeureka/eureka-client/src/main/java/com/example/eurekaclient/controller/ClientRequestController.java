@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
  * Created by kwz
  */
 @RestController
+@RequestMapping("client")
 public class ClientRequestController {
 
     @Value("${server.port}")
