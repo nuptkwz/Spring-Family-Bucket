@@ -11,4 +11,7 @@ eureka.client.registerWithEureka：false和fetchRegistry：false来表明自己�
 ribbon是一个负载均衡客户端，可以很好的控制htt和tcp的一些行为,Feign默认集成了ribbon。
 ## service-feign
 Feign是一个声明式的伪Http客户端，它使得写Http客户端变得更简单,通过feign进行第三方服务的调用。
+## Hystrix
+为解决服务与服务之间的依赖性，故障传播，对整个微服务系统造成灾难性的严重后果，造成服务故障的“雪崩”效应。
+而引入了熔断技术。熔断技术可用于避免连锁故障。
 ## Spring Boot Learning
