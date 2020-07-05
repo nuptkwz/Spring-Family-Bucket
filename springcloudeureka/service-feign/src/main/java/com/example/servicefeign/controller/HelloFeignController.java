@@ -4,6 +4,7 @@ import com.example.servicefeign.feign.IFeignService;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -13,12 +14,13 @@ import org.springframework.web.bind.annotation.RestController;
  * Created by kwz
  */
 @RestController
+@RequestMapping("feign")
 public class HelloFeignController {
 
     @Setter(onMethod_ = @Autowired)
     private IFeignService feignService;
 
-    @GetMapping("feignHello")
+    @GetMapping("/hello")
     public String sayHello(@RequestParam("name") String name) {
         return feignService.sayHelloFromEurekaClientOne(name);
     }
