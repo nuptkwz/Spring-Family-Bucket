@@ -16,4 +16,7 @@ Feign是一个声明式的伪Http客户端，它使得写Http客户端变得更�
 而引入了熔断技术。熔断技术可用于避免连锁故障。
 ### 在ribbon使用断路器
 ### 在Feign中使用断路器
+## Zuul
+Zuul的主要功能是路由转发和过滤器。zuul和Ribbon结合实现了负载均衡的功能。
+
 ## Spring Boot Learning
