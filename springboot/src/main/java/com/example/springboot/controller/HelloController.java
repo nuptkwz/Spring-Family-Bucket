@@ -1,9 +1,17 @@
 package com.example.springboot.controller;
 
+import com.example.springboot.config.PersonalConfig;
+import com.google.common.collect.Lists;
+import lombok.Setter;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Description
@@ -16,6 +24,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("hello")
+@Slf4j
 public class HelloController {
 
     @Value("${personal.hello}")
@@ -23,6 +32,9 @@ public class HelloController {
 
     @Value("${personal.uuid}")
     private String personalUuid;
+
+    @Setter(onMethod_ = @Autowired)
+    private PersonalConfig personalConfig;
 
     @GetMapping
     public String index() {
@@ -32,5 +44,16 @@ public class HelloController {
     @GetMapping("/config")
     public String getConfig() {
         return hello + " " + personalUuid;
+    }
+
+    @GetMapping("/PersonalConfig")
+    public List<Object> personalConfig() {
+        List<Object> personalList = Lists.newArrayList();
+        personalList.add(personalConfig.getAge());
+        personalList.add(personalConfig.getName());
+        personalList.add(personalConfig.getHello());
+        personalList.add(personalConfig.getMax());
+        personalList.add(personalConfig.getUuid());
+        return personalList;
     }
 }

@@ -8,5 +8,6 @@ server:
 personal:
   name: keweizhou
   age: 25
+  max: ${random.int(10)}
   uuid: ${random.uuid}
   hello: hello, i'm ${personal.name}, and ${personal.age}
