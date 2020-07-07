@@ -1,6 +1,7 @@
 package com.example.springboot.controller;
 
 import com.example.springboot.config.PersonalConfig;
+import com.example.springboot.config.UserConfig;
 import com.google.common.collect.Lists;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
@@ -10,7 +11,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -36,6 +36,9 @@ public class HelloController {
     @Setter(onMethod_ = @Autowired)
     private PersonalConfig personalConfig;
 
+    @Setter(onMethod_ = @Autowired)
+    private UserConfig userConfig;
+
     @GetMapping
     public String index() {
         return "hello spring boot";
@@ -55,5 +58,10 @@ public class HelloController {
         personalList.add(personalConfig.getMax());
         personalList.add(personalConfig.getUuid());
         return personalList;
+    }
+
+    @GetMapping("/UserConfig")
+    public String getUserConfig() {
+        return userConfig.getName() + " " + userConfig.getAge();
     }
 }
