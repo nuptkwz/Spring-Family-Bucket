@@ -8,5 +8,4 @@ spring family bucket learning example
 
 ## Spring Data Monngo
 
-
 ## Spring Data ES
