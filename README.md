@@ -10,6 +10,4 @@ spring family bucket learning example
 
 ## Spring Data ES
 
-## Kafka
-
 ## rabbit
