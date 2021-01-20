@@ -1,4 +1,6 @@
 spring:
+  profiles:
+    active: dev
   application:
     name: spring-boot
 
@@ -11,3 +13,9 @@ personal:
   max: ${random.int(10)}
   uuid: ${random.uuid}
   hello: hello, i'm ${personal.name}, and ${personal.age}
+# 配置文件格式
+#  /{application}.yml
+#  /{application}-{profile}.yml
+#  /{label}/{application}-{profile}.yml
+#  /{application}-{profile}.properties
+#  /{label}/{application}-{profile}.properties
