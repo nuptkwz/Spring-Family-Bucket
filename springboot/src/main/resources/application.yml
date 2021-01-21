@@ -19,3 +19,8 @@ personal:
 #  /{label}/{application}-{profile}.yml
 #  /{application}-{profile}.properties
 #  /{label}/{application}-{profile}.properties
+score:
+  subject:
+    math: 89
+    chinese: 78
+    english: 88
