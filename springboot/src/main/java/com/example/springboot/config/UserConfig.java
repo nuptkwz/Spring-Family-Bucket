@@ -13,7 +13,7 @@ import org.springframework.context.annotation.PropertySource;
  */
 @Configuration
 @PropertySource(value = "classpath:dev.properties")
-@ConfigurationProperties(prefix = "com.example")
+@ConfigurationProperties(prefix = "")
 @Data
 public class UserConfig {
     private String name;

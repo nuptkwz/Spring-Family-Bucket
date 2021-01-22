@@ -29,8 +29,8 @@ public class DevDataInitConfig {
         return new CommandLineRunner() {
             @Override
             public void run(String... args) throws Exception {
-                Map<String, String> scores = scoreConfig.getScores();
-                log.info(scores + "init dev environment params");
+                String name = scoreConfig.getName();
+                log.info(name + "init dev environment params");
             }
         };
     }
