@@ -12,7 +12,7 @@ import javax.sql.DataSource;
  * Created by kwz
  */
 @Configuration
-public class DataSourceConfig {
+public class DataSourceConfig{
 
     @Bean
     @Profile("dev")
