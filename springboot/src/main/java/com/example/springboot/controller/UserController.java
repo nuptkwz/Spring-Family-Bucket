@@ -25,7 +25,7 @@ import java.util.List;
 @RestController
 @RequestMapping("hello")
 @Slf4j
-public class HelloController {
+public class UserController {
 
     @Value("${personal.hello}")
     private String hello;

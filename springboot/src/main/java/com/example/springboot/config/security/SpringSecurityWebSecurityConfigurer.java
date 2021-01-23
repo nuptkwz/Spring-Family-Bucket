@@ -1,6 +1,5 @@
 package com.example.springboot.config.security;
 
-import org.springframework.boot.autoconfigure.security.servlet.WebSecurityEnablerConfiguration;
 import org.springframework.context.annotation.Configuration;
 
 /**
@@ -9,6 +8,6 @@ import org.springframework.context.annotation.Configuration;
  * Created by kwz
  */
 @Configuration
-public class SpringSecurityWebSecurityConfigurer{
+public class SpringSecurityWebSecurityConfigurer {
 
 }
